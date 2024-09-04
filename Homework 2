@@ -1,0 +1,68 @@
+using System;
+
+namespace Homework2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Code for Q1
+            Console.WriteLine("Please input a letter grade:");
+            string x = Console.ReadLine();
+
+            switch (x)
+            {
+                case "A":
+                    Console.WriteLine("GPA Point: 4");
+                    break;
+                case "B":
+                    Console.WriteLine("GPA Point: 3");
+                    break;
+                case "C":
+                    Console.WriteLine("GPA Point: 2");
+                    break;
+                case "D":
+                    Console.WriteLine("GPA Point: 1");
+                    break;
+                case "F":
+                    Console.WriteLine("GPA Point: 0");
+                    break;
+                default:
+                    Console.WriteLine("Wrong Letter Grade!");
+                    break;
+            }
+
+            // Code for Q2
+        Console.WriteLine("Please Input First Number:");
+        string y = Console.ReadLine();
+        int y_int = Convert.ToInt16(y);
+
+        Console.WriteLine("Please Input Second Number:");
+        string z = Console.ReadLine();
+        int z_int = Convert.ToInt16(z);
+
+        Console.WriteLine("Please Input Third Number:");
+        string q = Console.ReadLine();
+        int q_int = Convert.ToInt16(q);
+
+        if(y_int<z_int && y_int<q_int){
+            Console.WriteLine($"The Smallest Value is: {y_int}");
+        }
+        else if(z_int<y_int && z_int<q_int){
+            Console.WriteLine($"The Smallest Value is: {z_int}");
+        }
+        else if(q_int<y_int && q_int<z_int){
+            Console.WriteLine($"The Smallest Value is: {q_int}");
+        }
+                    // Code for Bonus question
+        Console.WriteLine("Please Input a year:");
+        string year = Console.ReadLine();
+        int year_int = Convert.ToInt16(year);
+        if((year_int%4 == 0 && year_int% 100 != 0) || (year_int% 400 == 0)){
+            Console.WriteLine($"{year_int} is a leap year");}
+        else{
+            Console.WriteLine($"{year_int} is a NOT a leap year");
+        }
+        }
+        }
+        }
