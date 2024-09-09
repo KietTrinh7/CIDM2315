@@ -1,0 +1,79 @@
+namespace Homework3;
+class Program
+{
+    static void Main(string[ ] args)
+    {
+        // Code for Q1
+ Console.WriteLine("Input an Integer:");
+ string num = Console.ReadLine();
+ int n = Convert.ToInt32(num);
+ if(n<2){
+    Console.WriteLine("N is non-prime");
+ }
+ else if(n==2){
+    Console.WriteLine("N is prime");
+ }
+ else{
+    bool isPrime = true;
+    for (int i = 2; i*i <= n; i++){
+        if( n % i == 0){
+            isPrime = false;
+            Console.WriteLine("N is non-prime");
+            break;
+        }
+    }
+    if(isPrime)
+    {
+        Console.WriteLine("N is Prime");
+    }
+ }
+
+        // Code for Q2
+Console.WriteLine("Assign an int value to N:");
+string k_string = Console.ReadLine();
+int k = Convert.ToInt32(k_string);
+    if(k<0){
+        Console.WriteLine("Please Input a number higher than 0");
+    }
+    for (int l = 0; k > l; l++){
+        {
+            for(int j = 0; j < k; j++){
+                Console.Write("#");            }
+        }
+        Console.WriteLine();
+    }
+    // Code for Q3
+    Console.WriteLine("Assign an int value to N:");
+    string q = Console.ReadLine();
+    int q_int = Convert.ToInt32(q);
+    if(q_int<1){
+        Console.WriteLine("Please Input a value above 1");
+    }
+    for(int i3 = 1 ; i3 <= q_int ; i3++){
+            for(int q3 = 0 ; i3 > q3 ; q3++){
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+           // Code for Bonus question
+        Console.WriteLine("Assign an int value to N:");
+        string x = Console.ReadLine();
+        int bonus = Convert.ToInt32(x);
+        if(bonus<1){
+            Console.WriteLine("Please Input a value above 1");
+        }
+        for(int b3 = 1 ; b3 <= bonus ; b3++){
+        int digit = b3;
+        int spaces = bonus - b3;
+        Console.Write(new string(' ', spaces));
+            for(int s3 = 0 ; s3 < b3 ; s3++){
+            
+                Console.Write($"{digit}");
+            }
+            Console.WriteLine();
+    }
+    }
+    
+        }
+    
+
