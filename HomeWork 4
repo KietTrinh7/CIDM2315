@@ -1,0 +1,60 @@
+namespace Homework4;
+class Program
+{
+
+    static void Main(string[ ] args)
+    	{
+       // Call Q1_method()
+        Console.WriteLine("Please Input an Integer:");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Please Input another Integer");
+        int b = Convert.ToInt32(Console.ReadLine());
+
+        int large = Method(a,b);
+        Console.WriteLine($"a = {a}; b = {b} \nThe largest number is "+ large);
+
+       // Call Q2_method()
+       Console.WriteLine("Please input an Integer");
+       int N = Convert.ToInt32(Console.ReadLine());
+       Console.WriteLine("Choose: Left or Right");
+       string side = Console.ReadLine();
+       Shape(N,side);
+
+}
+
+
+// Q1_method
+ static int Method(int a, int b){
+        if (a>b){
+            return a;
+        }
+        else{
+            return b;
+        }
+    }
+
+ //Q2_method   
+    static void Shape(int N, string side) {
+    Console.WriteLine($"N: {N} ; Shape: {side}");
+    
+    if (side == "Left" || side =="left") {
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= i; j++) {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+    }
+    if (side == "Right" || side == "right") {
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= N - i; j++) {
+                Console.Write(" ");
+            }
+            for (int k = 1; k <= i; k++) {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+}
+    }
+}
