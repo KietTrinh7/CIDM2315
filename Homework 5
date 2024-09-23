@@ -1,0 +1,71 @@
+namespace Homework5;
+class Program
+{
+    static void Main(string[ ] args)
+    	{
+       // Call Q1_method()
+    Console.WriteLine("Please Input two integers:");
+    int x = Convert.ToInt32(Console.ReadLine());
+    int y = Convert.ToInt32(Console.ReadLine());
+    int large = Main(x,y);
+    Console.WriteLine($"a = {x}; b = {y}");
+    Console.WriteLine($"The largest number is {large}");
+       // Call Q2_method()
+    Console.WriteLine("Please Input 4 More Integers");
+    int q = Convert.ToInt32(Console.ReadLine());
+    int w = Convert.ToInt32(Console.ReadLine());
+    int e = Convert.ToInt32(Console.ReadLine());
+    int r = Convert.ToInt32(Console.ReadLine());
+    int max1 = Main(q,w);
+    int max2 = Main(e,r);
+    int max3 = Main(max1,max2);
+    Console.WriteLine($"a = {q}; b = {w} ; c = {e}; d = {r};");
+    Console.WriteLine($"The largest number is: {max3}");
+
+ // Call Q3_method()
+ createAccount();
+}
+
+
+ // Q1_method
+ static int Main(int a, int b){
+    if(a>b){
+        return a;
+    }
+    else{
+        return b;
+    }
+ }
+ // Q2_method
+    // used Q1_Method
+ // Q3_method
+ static bool checkAge(int birth_year){
+    int age = 2024-birth_year;
+    if(age>18){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+static void createAccount(){
+Console.WriteLine("Please Enter Username");
+string user = Console.ReadLine();
+Console.WriteLine("Please Enter Password");
+string pass = Console.ReadLine();
+Console.WriteLine("Please Re-Enter Password");
+string pass2 = Console.ReadLine();
+Console.WriteLine("Please Enter birthyear");
+int birthdayYear = Convert.ToInt16(Console.ReadLine());
+bool q1 = checkAge(birthdayYear);
+if(q1 == false){
+    Console.WriteLine("Could not create account due to Age limit");
+}
+else if (pass == pass2){
+    Console.WriteLine("Account is created successfully");
+}
+else{
+    Console.WriteLine("Wrong Password");
+}
+  }
+}
