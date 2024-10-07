@@ -4,3 +4,4 @@
 09/11/2024; Merged Console.Readline with Convert.ToInt32 in Homework 3 for simplicity
 09/16/2024; Added Homework 4
 09/23/2024; Added Homework 5
+10/07/2024: Added Homework 6
