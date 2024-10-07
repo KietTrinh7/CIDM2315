@@ -1,0 +1,81 @@
+namespace Homework6;
+class Program
+{
+    static void Main(string[ ] args)
+    	{
+            Professor a1 = new Professor();
+            Professor a2 = new Professor();
+            Student b1 = new Student();
+            Student b2 = new Student();
+            // Professors
+           // Alice
+           a1.profName = "Alice";
+           a1.classTeach = "Java";
+           a1.SetSalary(9000);
+           a1.printProf();
+           // Bob
+           a2.profName = "Bob";
+           a2.classTeach = "Math";
+           a2.SetSalary(8000);
+           a2.printProf();
+            // Students
+           //Lisa
+            b1.studentName = "Lisa";
+            b1.classEnroll = "Java";
+            b1.SetGrade(90);
+            b1.printStudent();
+           //Tom
+            b2.studentName = "Tom";
+            b2.classEnroll = "Math";
+            b2.SetGrade(80);
+            b2.printStudent();
+           a1.diffSalary(9000,8000);
+           a1.sumGrade(90,80);
+    
+       // Answer Q1 and Q2
+ }
+ }
+
+
+class Professor
+{
+// Code for Professor class
+public string profName;
+public string classTeach;
+private double salary;
+public void SetSalary(double salary_amount){
+    salary = salary_amount; 
+}
+public double GetSalary(){
+    return salary;
+}
+public void printProf(){
+    Console.WriteLine($"Professor {profName} teaches {classTeach} and the salary is: {salary}");
+}
+public void diffSalary(int a, int b){
+ int diff = a - b;
+ Console.WriteLine($"The salary difference between Alice and Bob is: {diff}");
+}
+public void sumGrade(int a, int b){
+ int sum = a + b;
+ Console.WriteLine($"The total grade of Lisa and Tom is: {sum}");
+}
+}
+
+
+class Student
+{
+// Code for Student class
+public string studentName;
+public string classEnroll;
+private double studentGrade;
+public void SetGrade(double newGrade){
+    studentGrade = newGrade;
+}
+public double GetGrade(){
+    return studentGrade;
+}
+public void printStudent(){
+    Console.WriteLine($"Student {studentName} enrolls {classEnroll}, and the grade is: {studentGrade}");
+}
+}
