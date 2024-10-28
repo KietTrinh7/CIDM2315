@@ -1,0 +1,51 @@
+namespace Homework9;
+class Program
+{
+    static void Main(string[ ] args)
+    	{
+        Student alice = new Student(111, "Alice");
+        Student bob = new Student(222, "Bob");
+        Student cathy = new Student(333, "Cathy");
+        Student david = new Student(444, "David");
+        alice.PrintInfo();
+        bob.PrintInfo();
+        cathy.PrintInfo();
+        david.PrintInfo();
+    Dictionary<string, double> studentInfo = new Dictionary<string,double>();
+    studentInfo.Add("Alice", 4.0);
+    studentInfo.Add("Bob", 3.6);
+    studentInfo.Add("Cathy", 2.5);
+    studentInfo.Add("David", 1.8);
+    if(!studentInfo.ContainsKey("Tom")){
+        studentInfo.Add("Tom", 3.3);
+    }
+    double totalGPA = 0;
+    foreach(var gpa in studentInfo.Values){
+        totalGPA += gpa;
+    }
+    double averageGPA = totalGPA / studentInfo.Count;
+    Console.WriteLine($"Average GPA: {averageGPA}");
+    foreach(var entry in studentInfo){
+        if (entry.Value > averageGPA)
+        {
+            Console.WriteLine($"Student Name: {entry.Key}, GPA: {entry.Value}");
+        }
+    }
+
+        }
+class Student{
+public static List<Student> studentList = new List<Student>();
+
+private int studentID;
+private string studentName;
+public void PrintInfo(){
+    Console.WriteLine($"Student ID: {studentID}, Student Name: {studentName}");
+}
+public Student(int ID, string Name){
+    studentID = ID;
+    studentName = Name;
+    studentList.Add(this);
+}
+}
+ }
+ 
